@@ -1,4 +1,4 @@
-#include "main"
+#include "mainh"
 /**
  *reverse_array - reverses content of array
  *@a: array to be reversed
@@ -9,12 +9,12 @@ void reverse_array(int *a, int n)
 {
 	int i, swap;
 
-	for (i = 0; (i < (n - 1) / 2); i++)
+	for (int i = 0; i < n; i++)
 	{
+		n--;
 		swap = a[i];
-		a[i] = a[n - i - 1];
-		a[n - i - 1] = swap;
+		a[i] = a[n];
+		a[n] = swap;
 
-	}
 
 }
