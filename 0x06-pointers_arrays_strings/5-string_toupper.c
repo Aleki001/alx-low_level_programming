@@ -2,15 +2,15 @@
 #include <string.h>
 /**
  *string_toupper - converts lowercase to upper
- *@str: parameter
+ *@s: parameter
  *Return: character
  */
-char *string_toupper(char *str)
+char *string_toupper(char *s)
 {
-	for (int i = 0; str[i] != '\0'; i++)
+	for (int i = 0; s[i] != '\0'; i++)
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-			str[i] -= 'a' - 'A';
+		if (s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 'a' - 'A';
 	}
-	return (str);
+	return (s);
 }
