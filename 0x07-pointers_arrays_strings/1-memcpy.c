@@ -13,6 +13,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	while (n > j)
 	{
 		dest[j] = src[j];
+		j++;
 	}
 
 	return (dest);
