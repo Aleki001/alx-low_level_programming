@@ -3,17 +3,20 @@
  *_strchr - locates a character in string
  *@s: pointer to string
  *@c: chracter to be located
- *@REturn: Null or s
+ *Return: pointer to charcter occurence
  */
 char *_strchr(char *s, char c)
 {
-	for (int i = 0; s[i]; i++)
+	while (*s)
 	{
-		if (s[i] == c)
+		if (*s != c)
+		{
+			s++;
+		}
+		else
 		{
 			return (s);
 		}
-	}
 
 	return (NULL);
 }
