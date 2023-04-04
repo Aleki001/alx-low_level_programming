@@ -7,7 +7,7 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	for (; *s != '\0'; s++)
+	while (*s)
 	{
 		for (int j = 0; accept[j]; j++)
 		{
@@ -16,6 +16,8 @@ char *_strpbrk(char *s, char *accept)
 				return (s);
 			}
 		}
+
+		s++;
 	}
 
 	return (NULL);
