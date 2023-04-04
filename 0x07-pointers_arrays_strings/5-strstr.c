@@ -21,16 +21,17 @@ char *_strstr(char *haystack, char *needle)
 			{
 				break;
 			}
-	}
+		}
+		if (needle[n])
+		{
+			m++;
+			n = 0;
+		}
+		else
+		{
+			return (haystack + m);
+		}
 
-	if (needle[n])
-	{
-		m++;
-		n = 0;
-	}
-	else
-	{
-		return (haystack + m);
 	}
 
 	return (0);
