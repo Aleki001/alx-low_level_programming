@@ -7,11 +7,11 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	for (int i = 0; s[i]; i++)
+	for (; *s != '\0'; s++)
 	{
 		for (int j = 0; accept[j]; j++)
 		{
-			if (s[i] == accept[j])
+			if (*s == accept[j])
 			{
 				return (s);
 			}
