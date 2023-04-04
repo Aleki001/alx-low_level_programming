@@ -2,7 +2,6 @@
 /**
  * print_chessboard - prints the chessboard
  *@a: peices to print
- *@8: no of times
  *Return: 0
  */
 void print_chessboard(char (*a)[8])
