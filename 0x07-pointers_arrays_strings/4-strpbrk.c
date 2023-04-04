@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 /**
  *_strpbrk - locates occurence in sting s
  *@s: string to check
