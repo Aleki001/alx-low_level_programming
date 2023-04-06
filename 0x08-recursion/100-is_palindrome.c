@@ -1,44 +1,50 @@
 #include "main.h"
 /**
  * _strlen_recursion - prints length
- *@s: string
- *Return: length of string
+ * @s: string
+ * Return: length of string
  */
 int _strlen_recursion(char *s)
 {
-	if (s[0] != '\0')
-	{
-		return (1 + _strlen_recursion(s + 1));
-	}
+	if (*s == '\0')
+		return (0);
 
-	return (0);
-
+	return (1 + _strlen_recursion(s + 1));
 }
+
+
 /**
- * is_palindrome - check if s is palindrome
- *@s: string
- *Return: 1 if prime, 0
+ * palindrome - check if palindrome
+ * @s: string
+ * @i: start index
+ * @j: end index
+ * Return: 1 if palindrome, 0 otherwise
+ */
+int palindrome(char *s, int i, int j)
+{
+	if (i >= j)
+		return (1);
+
+	if (s[i] != s[j])
+		return (0);
+
+	return (palindrome(s, i + 1, j - 1));
+}
+
+/**
+ * is_palindrome - check if palindrome
+ * @s: string
+ * Return: 1 if palindrome, 0 otherwise
  */
 int is_palindrome(char *s)
 {
-	return (palindrome(s, 0, _strlen_recursion(s) - 1));
+	int len;
 
+	len = _strlen_recursion(s);
+
+	if (len == 0)
+		return (1);
+
+	return (palindrome(s, 0, len - 1));
 }
 
-/**
- *palindrome - check if palindrome.
- * @s: string base address.
- * @index1: index1.
- * @index2: index2.
- * Return: 1 if palindrome, 0 otherwise.
- */
-int palindrome(char *s, int index1, int index2)
-{
-	if (s[index1] == s[index2])
-		if (index1 > index2 / 2)
-			return (1);
-		else
-			return (palindrome(s, index1 + 1, index2 - 1));
-	else
-		return (0);
-}
