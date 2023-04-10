@@ -7,9 +7,9 @@
  *@argv: arguments passed
  *Return: (0)
  */
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
-	int i, x,
+	int i, x;
 	int total = 0;
 	char *symb;
 
@@ -20,10 +20,10 @@ int main(int argc, char *argv)
 		return (0);
 	}
 
-	for (i = 1; argv[i]; i++)
+	for (i = 1; i < argc; i++)
 	{
 		x = strtol(argv[i], &symb, 10);
-		if (*symb)
+		if (*symb != '\0' || !isdigit(argv[i][0]))
 		{
 			printf("Error\n");
 
