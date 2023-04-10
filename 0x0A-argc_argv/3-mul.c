@@ -8,8 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
-	int multiple;
+	int multiple, no1, no2;
 
 	if (argc != 3)
 	{
@@ -17,8 +16,8 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	int no1 = atoi(argv[1]);
-	int no2 = atoi(argv[2]);
+	no1 = atoi(argv[1]);
+	no2 = atoi(argv[2]);
 
 	multiple = no1 * no2;
 	printf("%d\n", multiple);
