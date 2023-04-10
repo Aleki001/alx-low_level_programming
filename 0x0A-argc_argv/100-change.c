@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 /**
  *main - prints minimum no of coins to make change
  *@argc: no of arguments
