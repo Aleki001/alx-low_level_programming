@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
 	int cents[] = {25, 10, 5, 2, 1};
 
-	for (i = 0; i < 5 && a >0; i++)
+	for (i = 0; i < 5 && a > 0; i++)
 	{
 		while (a >= cents[i])
 		{
