@@ -16,7 +16,7 @@ char *str_concat(char *s1, char *s2)
 	if (s1 != NULL)
 	{
 		l1 = 0;
-		while (s1[l1] != '\0')
+		while (s1[l1++] != '\0')
 		{
 			l1++;
 		}
@@ -24,7 +24,7 @@ char *str_concat(char *s1, char *s2)
 	if (s2 != NULL)
 	{
 		l2 = 0;
-		while (s2[l2] != '\0')
+		while (s2[l2++] != '\0')
 		{
 			l2++;
 		}
