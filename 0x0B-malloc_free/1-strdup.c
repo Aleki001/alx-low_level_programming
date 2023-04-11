@@ -7,19 +7,19 @@
  */
 char *_strdup(char *str)
 {
+	int len = 0;
+	int i;
+	char *dup;
+
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	int len = 0, i;
-
 	while (str[len] != '\0')
 	{
 		len++;
 	}
-
-	char *dup;
 
 	dup = (char *)malloc(sizeof(char) * (len + 1));
 
@@ -31,4 +31,8 @@ char *_strdup(char *str)
 		dup[i] = str[i];
 	}
 
+	dup[len] = '\0';
+
 	return (dup);
+
+}
