@@ -31,7 +31,7 @@ char *argstostr(int ac, char **av)
 
 	if (concat == NULL)
 		return (NULL);
-	for (i = 0; j = 0; i < ac && j < length; i++)
+	for (i = 0, j = 0; (i < ac && j < length); i++)
 	{
 		m = av[i];
 
