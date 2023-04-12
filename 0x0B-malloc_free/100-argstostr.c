@@ -20,9 +20,10 @@ char *argstostr(int ac, char **av)
 		m = av[i];
 		j = 0;
 
-		while (m[j++])
+		while (m[j] != '\0')
 		{
 			length++;
+			j++;
 		}
 		length++;
 	}
@@ -34,6 +35,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0, j = 0; (i < ac && j < length); i++)
 	{
 		m = av[i];
+		count = 0;
 
 		while (m[count])
 		{
