@@ -19,14 +19,9 @@ int *array_range(int min, int max)
 	if (array == NULL)
 		return (NULL);
 
-	for (i = 0; i < len; i++)
+	for (i = 0; i <= len; i++)
 	{
-		ptr[i] = min + i;
-
-		if (min + 1 > 9)
-		{
-			arr[i] = 'a' + (min + i - 10);
-		}
+		array[i] = min + i;
 	}
 
 	return (ptr);
