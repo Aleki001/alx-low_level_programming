@@ -22,6 +22,11 @@ int *array_range(int min, int max)
 	for (i = 0; i < len; i++)
 	{
 		ptr[i] = min + i;
+
+		if (min + 1 > 9)
+		{
+			arr[i] = 'a' + (min + i - 10);
+		}
 	}
 
 	return (ptr);
