@@ -2,7 +2,7 @@
 /**
  *sum_listint - returns sum of all data in the list
  *@head: head node
- *REturn: sum otherwise null
+ *Return: sum otherwise null
  */
 int sum_listint(listint_t *head)
 {
