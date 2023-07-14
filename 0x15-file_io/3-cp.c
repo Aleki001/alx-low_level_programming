@@ -1,7 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
  * checkArguments - checks for the correct number of arguments
  * @arg_count: no of arguments
@@ -80,14 +77,14 @@ void check_fd_close(int check, int fd)
  *
  * Return: 0 on success
  */
-int main(int argc, char *argv[])
+int main(int arg_count, char *argv[])
 {
 	int fd_from, fd_to, close_to, close_from;
 	ssize_t lenr, lenw;
 	char buffer[1024];
 	mode_t file_perm;
 
-	check_arg_count(argc);
+	checkArguments(arg_count);
 	fd_from = open(argv[1], O_RDONLY);
 	check_file_read((ssize_t)fd_from, argv[1], -1, -1);
 	file_perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
